@@ -1,0 +1,29 @@
+[Oracle Docker 정보]
+
+컨테이너 이름:
+oracle-free
+
+이미지:
+container-registry.oracle.com/database/free:latest
+
+실행 명령어:
+docker run -d --name oracle-free -p 1521:1521 -e ORACLE_PWD=oracle1234 container-registry.oracle.com/database/free:latest
+
+Oracle 비밀번호:
+oracle1234
+
+SQL Developer 접속 정보:
+Host: localhost
+Port: 1521
+Username: system
+Password: oracle1234
+Service name: FREEPDB1
+
+컨테이너 시작:
+docker start oracle-free
+
+컨테이너 중지:
+docker stop oracle-free
+
+로그 확인:
+docker logs -f oracle-free
